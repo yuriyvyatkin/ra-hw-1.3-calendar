@@ -3,7 +3,7 @@ export default function getDateObject(date) {
     return s.charAt(0).toUpperCase() + s.slice(1)
   }
 
-  const options = { month: 'long', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
+  const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
   const fullDate = new Intl.DateTimeFormat('ru-RU', options).format(date);
   const splittedDate = fullDate.split(/[,\sг.]+/g);
 
